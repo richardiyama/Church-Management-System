@@ -25,7 +25,7 @@
         activate();
 
         function activate() {
-            logSuccess('Hot Towel Angular loaded!', null, true);
+            logSuccess('Church Management System!', null, true);
             common.activateController([], controllerId);
         }
 

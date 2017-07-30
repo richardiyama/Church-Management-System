@@ -78,3 +78,4 @@ c:\users\richard iyama\documents\visual studio 2017\Projects\ChurchAdministratio
 c:\users\richard iyama\documents\visual studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\bin\zh-Hant\System.Spatial.resources.dll
 c:\users\richard iyama\documents\visual studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\obj\Debug\ChurchAdminstrationsClient.dll
 c:\users\richard iyama\documents\visual studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\obj\Debug\ChurchAdminstrationsClient.pdb
+C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\obj\Debug\ChurchAdminstrationsClient.csprojResolveAssemblyReference.cache

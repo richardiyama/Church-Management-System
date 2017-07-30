@@ -30,13 +30,37 @@
                     }
                 }
             }, {
-                url: '/admin',
+                url: '/member',
                 config: {
-                    title: 'admin',
-                    templateUrl: 'app/admin/admin.html',
+                    title: 'member',
+                    templateUrl: 'app/member/member.html',
                     settings: {
                         nav: 2,
-                        content: '<i class="fa fa-lock"></i> Admin'
+                        content: '<i class="fa fa-lock"></i> Members'
+                    }
+                }
+            },
+
+            {
+                url: '/group',
+                config: {
+                    title: 'group',
+                    templateUrl: 'app/group/group.html',
+                    settings: {
+                        nav: 3,
+                        content: '<i class="fa fa-lock"></i> Groups'
+                    }
+                }
+            },
+
+            {
+                url: '/ministry',
+                config: {
+                    title: 'ministry',
+                    templateUrl: 'app/ministry/ministry.html',
+                    settings: {
+                        nav: 4,
+                        content: '<i class="fa fa-lock"></i> Ministries'
                     }
                 }
             }
