@@ -5,6 +5,7 @@
 
     angular.module('app').controller(getMember,['common', member]);
     angular.module('app').controller(addMember, ['common',addmember]);
+     
 
     function member(common) {
         var getLogFn = common.logger.getLogFn;
