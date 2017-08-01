@@ -102,8 +102,19 @@
   <ItemGroup>
     <Content Include="app\group\group.html" />
     <Content Include="app\group\group.js" />
+    <Content Include="app\member\addmember.html" />
     <Content Include="app\ministry\ministry.html" />
     <Content Include="app\ministry\ministry.js" />
+    <Content Include="content\bootstrap-theme.css" />
+    <Content Include="content\bootstrap-theme.min.css" />
+    <Content Include="content\bootstrap.css" />
+    <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\chosen.css" />
+    <Content Include="content\datepicker.css" />
+    <Content Include="content\fileinput.min.css" />
+    <Content Include="content\jasny-bootstrap.css" />
+    <Content Include="content\jasny-bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="scripts\angular-animate.min.js.map" />
@@ -113,7 +124,24 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="scripts\bootstrap-datepicker.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\canvas-to-blob.min.js" />
+    <Content Include="scripts\chosen.jquery.min.js" />
+    <Content Include="scripts\fileinput.min.js" />
+    <Content Include="scripts\fileinput_locale_LANG.js" />
+    <Content Include="scripts\holder.js" />
+    <Content Include="scripts\holder.min.js" />
+    <Content Include="scripts\jasny-bootstrap.js" />
+    <Content Include="scripts\jasny-bootstrap.min.js" />
     <Content Include="scripts\jquery-2.1.1.min.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\bootstrap.css.map" />
+    <Content Include="content\bootstrap-theme.css.map" />
+    <Content Include="content\jasny-bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,10 +171,6 @@
     <Content Include="app\services\datacontext.js" />
     <Content Include="app\services\directives.js" />
     <Content Include="app\services\entityManagerFactory.js" />
-    <Content Include="content\bootstrap-theme.css" />
-    <Content Include="content\bootstrap-theme.min.css" />
-    <Content Include="content\bootstrap.css" />
-    <Content Include="content\bootstrap.min.css" />
     <Content Include="content\breeze.directives.css" />
     <Content Include="content\customtheme.css" />
     <Content Include="content\font-awesome.css" />
@@ -160,7 +184,6 @@
     <Content Include="content\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
     <Content Include="scripts\angular-animate.js" />
     <Content Include="scripts\angular-animate.min.js" />
@@ -171,16 +194,9 @@
     <Content Include="scripts\angular-sanitize.min.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\breeze.angular.js" />
     <Content Include="scripts\breeze.debug.js" />
     <Content Include="scripts\breeze.directives.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="content\bootstrap.css.map" />
-    <Content Include="content\bootstrap-theme.css.map" />
     <Content Include="content\toastr.scss" />
     <Content Include="content\toastr.less" />
     <None Include="scripts\jquery-2.1.1.intellisense.js" />
@@ -194,6 +210,8 @@
     <Content Include="scripts\moment-with-langs.min.js" />
     <Content Include="scripts\moment.js" />
     <Content Include="scripts\moment.min.js" />
+    <Content Include="scripts\plugins\canvas-to-blob.js" />
+    <Content Include="scripts\plugins\canvas-to-blob.min.js" />
     <Content Include="scripts\q.js" />
     <Content Include="scripts\q.min.js" />
     <Content Include="scripts\spin.js" />

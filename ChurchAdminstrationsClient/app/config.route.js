@@ -42,6 +42,15 @@
             },
 
             {
+                url: '/addmember',
+                config: {
+                    title: 'Add member',
+                    templateUrl: 'app/member/addmember.html'
+             
+                }
+            },
+
+            {
                 url: '/group',
                 config: {
                     title: 'group',

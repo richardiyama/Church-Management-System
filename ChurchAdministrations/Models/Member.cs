@@ -19,7 +19,7 @@ namespace ChurchAdministrations.Models
         public string Email { get; set; }
 
  
-        
+        public string Gender { get; set; }
 
         public string MobileNo { get; set; }
 
@@ -36,6 +36,7 @@ namespace ChurchAdministrations.Models
    
         public DateTime BaptistDate { get; set; }
 
+        public string City { get; set; }
        
         public string Address { get; set; }
         public string Image { get; set; }
