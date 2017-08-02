@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ChurchAdministrations.Models;
@@ -24,9 +25,9 @@ namespace ChurchAdministrations.Controllers
 
         // GET: api/Member/5
         [ResponseType(typeof(Member))]
-        public IHttpActionResult GetMember(int id)
+        public async Task<IHttpActionResult> GetMember(int id)
         {
-            Member member = db.Members.Find(id);
+            Member member = await db.Members.FindAsync(id);
             if (member == null)
             {
                 return NotFound();
@@ -37,7 +38,7 @@ namespace ChurchAdministrations.Controllers
 
         // PUT: api/Member/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutMember(int id, Member member)
+        public async Task<IHttpActionResult> PutMember(int id, Member member)
         {
             if (!ModelState.IsValid)
             {
@@ -53,7 +54,7 @@ namespace ChurchAdministrations.Controllers
 
             try
             {
-                db.SaveChanges();
+                await db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -72,7 +73,7 @@ namespace ChurchAdministrations.Controllers
 
         // POST: api/Member
         [ResponseType(typeof(Member))]
-        public IHttpActionResult PostMember(Member member)
+        public async Task<IHttpActionResult> PostMember(Member member)
         {
             if (!ModelState.IsValid)
             {
@@ -80,23 +81,23 @@ namespace ChurchAdministrations.Controllers
             }
 
             db.Members.Add(member);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = member.MemberID }, member);
         }
 
         // DELETE: api/Member/5
         [ResponseType(typeof(Member))]
-        public IHttpActionResult DeleteMember(int id)
+        public async Task<IHttpActionResult> DeleteMember(int id)
         {
-            Member member = db.Members.Find(id);
+            Member member = await db.Members.FindAsync(id);
             if (member == null)
             {
                 return NotFound();
             }
 
             db.Members.Remove(member);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             return Ok(member);
         }

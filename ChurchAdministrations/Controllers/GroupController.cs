@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ChurchAdministrations.Models;
@@ -24,9 +25,9 @@ namespace ChurchAdministrations.Controllers
 
         // GET: api/Group/5
         [ResponseType(typeof(Group))]
-        public IHttpActionResult GetGroup(int id)
+        public async Task<IHttpActionResult> GetGroup(int id)
         {
-            Group group = db.Groups.Find(id);
+            Group group = await db.Groups.FindAsync(id);
             if (group == null)
             {
                 return NotFound();
@@ -37,7 +38,7 @@ namespace ChurchAdministrations.Controllers
 
         // PUT: api/Group/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutGroup(int id, Group group)
+        public async Task<IHttpActionResult> PutGroup(int id, Group group)
         {
             if (!ModelState.IsValid)
             {
@@ -53,7 +54,7 @@ namespace ChurchAdministrations.Controllers
 
             try
             {
-                db.SaveChanges();
+                await db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -72,7 +73,7 @@ namespace ChurchAdministrations.Controllers
 
         // POST: api/Group
         [ResponseType(typeof(Group))]
-        public IHttpActionResult PostGroup(Group group)
+        public async Task<IHttpActionResult> PostGroup(Group group)
         {
             if (!ModelState.IsValid)
             {
@@ -80,23 +81,23 @@ namespace ChurchAdministrations.Controllers
             }
 
             db.Groups.Add(group);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = group.GroupID }, group);
         }
 
         // DELETE: api/Group/5
         [ResponseType(typeof(Group))]
-        public IHttpActionResult DeleteGroup(int id)
+        public async Task<IHttpActionResult> DeleteGroup(int id)
         {
-            Group group = db.Groups.Find(id);
+            Group group = await db.Groups.FindAsync(id);
             if (group == null)
             {
                 return NotFound();
             }
 
             db.Groups.Remove(group);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             return Ok(group);
         }

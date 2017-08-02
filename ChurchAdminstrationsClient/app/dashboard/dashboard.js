@@ -32,6 +32,7 @@
 
         function getPeople() {
             return datacontext.getPeople().then(function (data) {
+                console.log(vm.people);
                 return vm.people = data;
             });
         }

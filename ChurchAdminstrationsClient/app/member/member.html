@@ -20,6 +20,68 @@
                                   
 
 
+
+                                    <div class="row">
+                                        <h1 class="text-center text-danger">Members</h1>
+                                        <hr />
+
+
+                                        <div class="row">
+                                            <div class="col-md-9 col-md-offset-1">
+                                               <input type="text" placeholder="Type to filter here" class="input-lg form-control" ng-model="txtFilter" />
+
+                                                <br />
+                                                <br />
+
+                                                <table class="table table-striped table-bordered">
+
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Photo</th>
+                                                            <th>Member Name</th>
+                                                            <th>Member Id</th>
+                                                            <th>Volunteer</th>
+                                                            <th>Member Email</th>
+                                                            <th>Mobile NO</th>
+                                                            
+                                                        </tr>
+
+                                                    </thead>
+
+                                                    <tr data-ng-repeat= "m in vm.members | filter:txtFilter">
+                                                        <td>
+                                                            {{m.Image}}
+                                                        </td>
+                                                        <td>
+                                                            {{m.Name}}
+                                                        </td>
+
+                                                        <td>
+                                                            {{m.MemberID}}
+                                                        </td>
+                                                        <td>
+                                                            {{m.MemberType}}
+                                                        </td>
+                                                        <td>
+                                                            {{m.Email}}
+                                                        </td>
+
+                                                        <td>
+                                                            {{m.MobileNo}}
+                                                        </td>
+                                                        <td><a class="btn btn-default" ng-href="#addmember/{{m.MemberID}}">Edit Employee</a></td>
+                                                        <td><a class="btn btn-danger" ng-href="#member/{{m.MemberID}}">Delete</a></td>
+                                                    </tr>
+
+
+                                                </table>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
                                      
                                 </section>
                             </div>

@@ -6,6 +6,8 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Net.Http.Headers;
+using System.Web.Http.Cors;
+using System.Web.Http.Routing;
 
 namespace ChurchAdministrations
 {
@@ -15,11 +17,15 @@ namespace ChurchAdministrations
         {
             // Web API configuration and services
 
-           // var cors = new EnableCorsAttribute("*", "*", "*");
-            //config.EnableCors(cors);
-            // Configure Web API to use only bearer token authentication.
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
+
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            //Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+
+          
 
             // Web API routes
             config.MapHttpAttributeRoutes();

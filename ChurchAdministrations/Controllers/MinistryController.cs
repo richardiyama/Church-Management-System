@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ChurchAdministrations.Models;
@@ -24,9 +25,9 @@ namespace ChurchAdministrations.Controllers
 
         // GET: api/Ministry/5
         [ResponseType(typeof(Ministry))]
-        public IHttpActionResult GetMinistry(int id)
+        public async Task<IHttpActionResult> GetMinistry(int id)
         {
-            Ministry ministry = db.Ministries.Find(id);
+            Ministry ministry = await db.Ministries.FindAsync(id);
             if (ministry == null)
             {
                 return NotFound();
@@ -37,7 +38,7 @@ namespace ChurchAdministrations.Controllers
 
         // PUT: api/Ministry/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutMinistry(int id, Ministry ministry)
+        public async Task<IHttpActionResult> PutMinistry(int id, Ministry ministry)
         {
             if (!ModelState.IsValid)
             {
@@ -53,7 +54,7 @@ namespace ChurchAdministrations.Controllers
 
             try
             {
-                db.SaveChanges();
+                await db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -72,7 +73,7 @@ namespace ChurchAdministrations.Controllers
 
         // POST: api/Ministry
         [ResponseType(typeof(Ministry))]
-        public IHttpActionResult PostMinistry(Ministry ministry)
+        public async Task<IHttpActionResult> PostMinistry(Ministry ministry)
         {
             if (!ModelState.IsValid)
             {
@@ -80,23 +81,23 @@ namespace ChurchAdministrations.Controllers
             }
 
             db.Ministries.Add(ministry);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = ministry.MinistryID }, ministry);
         }
 
         // DELETE: api/Ministry/5
         [ResponseType(typeof(Ministry))]
-        public IHttpActionResult DeleteMinistry(int id)
+        public async Task<IHttpActionResult> DeleteMinistry(int id)
         {
-            Ministry ministry = db.Ministries.Find(id);
+            Ministry ministry = await db.Ministries.FindAsync(id);
             if (ministry == null)
             {
                 return NotFound();
             }
 
             db.Ministries.Remove(ministry);
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             return Ok(ministry);
         }
