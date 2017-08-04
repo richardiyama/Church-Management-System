@@ -50,27 +50,27 @@
 
                                                     <tr data-ng-repeat= "m in vm.members | filter:txtFilter">
                                                         <td>
-                                                            {{m.Image}}
+                                                            {{m.image}}
                                                         </td>
                                                         <td>
-                                                            {{m.Name}}
+                                                            {{m.name}}
                                                         </td>
 
                                                         <td>
-                                                            {{m.MemberID}}
+                                                            {{m.memberID}}
                                                         </td>
                                                         <td>
-                                                            {{m.MemberType}}
+                                                            {{m.memberType}}
                                                         </td>
                                                         <td>
-                                                            {{m.Email}}
+                                                            {{m.email}}
                                                         </td>
 
                                                         <td>
-                                                            {{m.MobileNo}}
+                                                            {{m.mobileNo}}
                                                         </td>
-                                                        <td><a class="btn btn-default" ng-href="#addmember/{{m.MemberID}}">Edit Employee</a></td>
-                                                        <td><a class="btn btn-danger" ng-href="#member/{{m.MemberID}}">Delete</a></td>
+                                                        <td><a class="btn btn-default" ng-href="#addmember/{{m.memberID}}">Edit Employee</a></td>
+                                                        <td><a class="btn btn-danger" ng-href="#member/{{m.memberID}}">Delete</a></td>
                                                     </tr>
 
 

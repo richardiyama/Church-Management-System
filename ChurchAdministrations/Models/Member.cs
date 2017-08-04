@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace ChurchAdministrations.Models
-{
+{ 
+    
     public class Member
     {
 
@@ -41,8 +43,10 @@ namespace ChurchAdministrations.Models
         public string Address { get; set; }
         public string Image { get; set; }
 
+        
         public virtual ICollection<Group> Groups { get; set; }
 
+        
         public virtual ICollection<Ministry> Ministries { get; set; }
 
 

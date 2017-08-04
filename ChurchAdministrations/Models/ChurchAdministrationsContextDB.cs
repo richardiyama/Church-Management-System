@@ -17,6 +17,8 @@ namespace ChurchAdministrations.Models
     
         public ChurchAdministrationsContextDB() : base("name=ChurchAdministrationsContextDB")
         {
+            this.Configuration.ProxyCreationEnabled = false;
+            this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
         }
 
         public System.Data.Entity.DbSet<ChurchAdministrations.Models.Member> Members { get; set; }

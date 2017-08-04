@@ -26,7 +26,7 @@
                });
 
            function getMembersComplete(data, status, headers, config) {
-              return data.data;
+               return data.data;
             }
         }
 

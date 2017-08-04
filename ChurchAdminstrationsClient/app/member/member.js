@@ -25,7 +25,7 @@
 
         function getMembers() {
             return datacontext.getMembers().then(function (data) {
-                vm.members = data;
+                vm.members = data.$values;
                 console.log(vm.members);
                 return vm.members;
 
