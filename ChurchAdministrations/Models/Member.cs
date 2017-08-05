@@ -16,8 +16,15 @@ namespace ChurchAdministrations.Models
 
 
         public string Name { get; set; }
-
+        public string Username { get; set; }
         
+      
+        public string Password { get; set; }
+
+       
+        public string ConfirmPassword { get; set; }
+
+
         public string Email { get; set; }
 
  
@@ -25,7 +32,9 @@ namespace ChurchAdministrations.Models
 
         public string MobileNo { get; set; }
 
-   
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
         
         public string MaritalStatus { get; set; }
@@ -35,7 +44,9 @@ namespace ChurchAdministrations.Models
 
         public string Education { get; set; }
 
-   
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime BaptistDate { get; set; }
 
         public string City { get; set; }

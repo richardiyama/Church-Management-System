@@ -17,14 +17,13 @@ namespace ChurchAdministrations.Models
     
         public ChurchAdministrationsContextDB() : base("name=ChurchAdministrationsContextDB")
         {
-            this.Configuration.ProxyCreationEnabled = false;
-            this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public System.Data.Entity.DbSet<ChurchAdministrations.Models.Member> Members { get; set; }
 
-        public System.Data.Entity.DbSet<ChurchAdministrations.Models.Group> Groups { get; set; }
-
         public System.Data.Entity.DbSet<ChurchAdministrations.Models.Ministry> Ministries { get; set; }
+
+        public System.Data.Entity.DbSet<ChurchAdministrations.Models.Group> Groups { get; set; }
     }
 }

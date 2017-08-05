@@ -12,10 +12,14 @@
         var service = {
             getPeople: getPeople,
             getMessageCount: getMessageCount,
-            getMembers: getMembers
+            getMembers: getMembers,
+            getGroups: getGroups,
+            getMinstries: getMinstries
         };
 
         return service;
+
+
 
        function getMembers() {
            return $http.get('http://localhost:58376/api/Member')
@@ -29,6 +33,32 @@
                return data.data;
             }
         }
+
+       function getGroups() {
+           return $http.get('http://localhost:58376/api/Group')
+               .then(getGroupsComplete)
+               .catch(function (message) {
+                   (message);
+                   $location.url('/');
+               });
+
+           function getGroupsComplete(data, status, headers, config) {
+               return data.data;
+           }
+       }
+
+       function getMinstries() {
+           return $http.get('http://localhost:58376/api/Ministry')
+               .then(getMinistriesComplete)
+               .catch(function (message) {
+                   (message);
+                   $location.url('/');
+               });
+
+           function getMinistriesComplete(data, status, headers, config) {
+               return data.data;
+           }
+       }
 
         function getMessageCount() { return $q.when(72); }
 
