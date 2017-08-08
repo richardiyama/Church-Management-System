@@ -14,7 +14,10 @@
                                 <section class="panel">
                                     <header class="panel-heading">
                                      
-                                         <a class=" pull-right btn btn-info btn-sm" href="#/addmember"><h3>Add Member</h3></a>
+                                        <ul class="fa-ul">
+                                            <li><p><a href="#/addmember" class="btn btn-primary">Add New Member</a></p></li>
+                                            <li><b>Search </b> <input type="text" ng-model="name" /></li>
+                                        </ul>
    
                                     </header>
                                   
@@ -69,8 +72,8 @@
                                                         <td>
                                                             {{m.mobileNo}}
                                                         </td>
-                                                        <td><a class="btn btn-default" ng-href="#addmember/{{m.memberID}}">Edit Employee</a></td>
-                                                        <td><a class="btn btn-danger" ng-href="#member/{{m.memberID}}">Delete</a></td>
+                                                        <td><input type="button" ng-click="showedit(p)" class="btn btn-primary" value="Edit Member" /></td>
+                                                        <td><input type="button" ng-click="delete($index)" class="btn btn-primary" value="Delete Member" /></td>
                                                     </tr>
 
 

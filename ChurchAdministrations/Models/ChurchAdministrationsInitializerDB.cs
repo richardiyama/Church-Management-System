@@ -38,6 +38,9 @@ namespace ChurchAdministrations.Models
 
                 Education = "Computer Science",
 
+                GroupName = "Youth",
+
+                MinistryName = "Youth",
 
                 BaptistDate = Convert.ToDateTime(@"22/11/1998", System.Globalization.CultureInfo.GetCultureInfo("hi-IN").DateTimeFormat),
 

@@ -5,7 +5,7 @@
 
     // Collect the routes
     app.constant('routes', getRoutes());
-    
+
     // Configure the routes and route resolvers
     app.config(['$routeProvider', 'routes', routeConfigurator]);
     function routeConfigurator($routeProvider, routes) {
@@ -32,45 +32,48 @@
             }, {
                 url: '/member',
                 config: {
-                    title: 'member',
+                    title: 'Member',
                     templateUrl: 'app/member/member.html',
                     settings: {
                         nav: 2,
-                        content: '<i class="fa fa-lock"></i> Members'
+                        content: '<i class="fa fa-lock"></i> Member'
                     }
                 }
             },
-
             {
-                url: '/addmember',
-                config: {
-                    title: 'Add member',
-                    templateUrl: 'app/member/addmember.html'
-             
-                }
-            },
 
-            {
-                url: '/group',
-                config: {
-                    title: 'group',
-                    templateUrl: 'app/group/group.html',
-                    settings: {
-                        nav: 3,
-                        content: '<i class="fa fa-lock"></i> Groups'
-                    }
-                }
-            },
-
-            {
                 url: '/ministry',
                 config: {
-                    title: 'ministry',
+                    title: 'Ministry',
                     templateUrl: 'app/ministry/ministry.html',
                     settings: {
-                        nav: 4,
-                        content: '<i class="fa fa-lock"></i> Ministries'
+                        nav: 2,
+                        content: '<i class="fa fa-lock"></i> Ministry'
                     }
+                }
+            },
+
+            {
+
+                url: '/group',
+                config: {
+                    title: 'Group',
+                    templateUrl: 'app/group/group.html',
+                    settings: {
+                        nav: 2,
+                        content: '<i class="fa fa-lock"></i> Group'
+                    }
+                }
+            },
+
+            {
+
+                url: '/addmember',
+                config: {
+                    title: 'Add new member',
+                    templateUrl: 'app/addmember/addmember.html',
+                    controller: 'addmember'
+
                 }
             }
         ];

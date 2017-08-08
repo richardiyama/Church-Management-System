@@ -44,6 +44,9 @@ namespace ChurchAdministrations.Models
 
         public string Education { get; set; }
 
+        public string GroupName { get; set; }
+        public string MinistryName { get; set; }
+
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
