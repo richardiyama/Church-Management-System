@@ -1,0 +1,96 @@
+﻿<section class="mainbar" data-ng-controller="deletemember as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/member"><h3>Member List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <div>{{newmember.name}}</div>
+
+                                        <div>
+                                            {{newmember.username}}
+                                        </div>
+                                        <div>
+                                            {{newmember.email}}
+                                        </div>
+
+                                        <div>{{newmember.dateOfBirth}}</div>
+
+                                        <div>
+                                            {{newmember.password}}
+                                        </div>
+                                        <div>
+                                            {{newmember.confirmPassword}}
+                                        </div>
+
+                                        <div>{{newmember.gender}}</div>
+
+                                        <div>
+                                            {{newmember.mobileNo}}
+                                        </div>
+                                        <div>
+                                            {{newmember.city}}
+                                        </div>
+
+
+                                        <div>{{newmember.occupation}}</div>
+
+                                        <div>
+                                            {{newmember.education}}
+                                        </div>
+                                        <div>
+                                            {{newmember.groupName}}
+                                        </div>
+
+                                        <div>{{newmember.ministryName}}</div>
+
+                                        <div>
+                                            {{newmember.baptistDate}}
+                                        </div>
+                                        <div>
+                                            {{newmember.address}}
+                                        </div>
+
+                                        <div>{{newmember.maritalStatus}}</div>
+
+                                        <div>
+                                            {{newmember.image}}
+                                        </div>
+                                       
+
+                                        <div class="actions">
+
+                                            <a class="btn btn-danger"  data-ng-click="removeMember()">Remove</a>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

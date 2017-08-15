@@ -18,17 +18,9 @@
         //vm.members = [];
         activate();
 
-        $scope.editmember = function () {
-            //  var currentuser = $scope.user;
-            this.p.editMode = true;
-            //$scope.user.editMode = true;
-        }
+       
 
-        $scope.modifyMember = function () {
-            var message = datacontext.modifyMember(this.p, $scope);
-            this.p.editMode = false;
-            $scope.Modifymessage = "Data modified successfully"
-        }
+        
 
         $scope.save = function () {
             var currentmember = $scope.newmember;

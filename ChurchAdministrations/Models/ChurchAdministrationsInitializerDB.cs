@@ -51,9 +51,17 @@ namespace ChurchAdministrations.Models
             
 
             });
-            context.Groups.Add(new Group {  GroupName = "Youth",
-        ImageSource = "2.jpg"
-    });
+
+           
+            
+            context.Groups.Add(new Group
+            {
+                GroupName = "Youth",
+                ImageSource = "2.jpg"
+            });
+
+            
+
             context.Ministries.Add(new Ministry
             {
                 MinistryName = "Youth",

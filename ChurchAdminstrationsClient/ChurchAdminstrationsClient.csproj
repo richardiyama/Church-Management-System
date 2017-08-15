@@ -101,6 +101,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\addmember\addmember.js" />
+    <Content Include="app\deletemember\deletemember.html" />
+    <Content Include="app\deletemember\deletemember.js" />
+    <Content Include="app\editmember\editmember.html" />
+    <Content Include="app\editmember\editmember.js" />
     <Content Include="app\group\group.html" />
     <Content Include="app\group\group.js" />
     <Content Include="app\addmember\addmember.html" />
@@ -117,7 +121,9 @@
     <Content Include="content\jasny-bootstrap.css" />
     <Content Include="content\jasny-bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="scripts\angular-animate.min.js.map" />
     <Content Include="scripts\angular-route.min.js.map" />

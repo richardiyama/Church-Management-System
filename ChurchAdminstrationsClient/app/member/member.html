@@ -72,8 +72,8 @@
                                                         <td>
                                                             {{m.mobileNo}}
                                                         </td>
-                                                        <td><input type="button" ng-click="showedit(p)" class="btn btn-primary" value="Edit Member" /></td>
-                                                        <td><input type="button" ng-click="delete($index)" class="btn btn-primary" value="Delete Member" /></td>
+                                                        <td><a class="btn btn-primary" href="#/editmember/{{m.memberID}}">Edit Member</a></td>
+                                                        <td><a class="btn btn-primary" href="#/deletemember/{{m.memberID}}">Delete Member</a></td>
                                                     </tr>
 
 

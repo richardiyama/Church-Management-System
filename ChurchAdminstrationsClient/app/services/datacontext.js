@@ -2,12 +2,12 @@
     'use strict';
 
     var serviceId = 'datacontext';
-    angular.module('app').factory(serviceId, ['common','$http', datacontext]);
+    angular.module('app').factory(serviceId, ['common', '$http','$routeParams', datacontext]);
 
-    function datacontext(common,$http) {
+    function datacontext(common, $http,$routeParams) {
         var $q = common.$q;
+        
 
-     
         //$http = common.$http;
         //var $scope = common.$scope;
         var service = {
@@ -16,45 +16,15 @@
             getMinstries: getMinstries,
             getGroups: getGroups,
             getMembers: getMembers,
-            saveMember: saveMember,
-            modifyMember: modifyMember,
-            deletePeople: deletePeople
+            saveMember: saveMember
+         
         };
 
         return service;
 
         function getMessageCount() { return $q.when(72); }
 
-        function modifyMember(newmember, $scope) {
-            // var $scope = $scope;
-            var request = $http({
-                method: "post",
-                url: "/HotTowel/ModifyPeople",
-                data: newmember
-            });
-
-            return request.then(handleSucess, handleError);
-        }
-
-        function deletePeople(user, $scope, idx) {
-            // var $scope = $scope;
-            var request = $http({
-                method: "post",
-                url: "/HotTowel/DeletePeople",
-                data: user
-            });
-
-            return request.then(function (response) {
-                $scope.vm.people.splice(idx, 1);
-                $scope.Modifymessage = "Data deleted successfully"
-            },
-                function (error) {
-                    handleError(error);
-                }
-            );
-        }
-
-
+        
         function saveMember(newmember, $scope) {
             var request = $http({
                 method: "POST",
@@ -65,29 +35,9 @@
             //  var nsg = request.then(handleSucess, handleError);
 
             return request.then(function (response) {
+                 
+      
                
-                $scope.vm.members.push(response.data);
-                $scope.message = "Data saved successfully"
-                $scope.newmember.name = "";
-                $scope.newmember.username = "";
-                $scope.newmember.email = "";
-                $scope.newmember.dateofbirth = "";
-                $scope.newmember.password = "";
-                $scope.newmember.confirmpassword = "";
-                $scope.newmember.gender = "";
-                $scope.newmember.mobileno = "";
-                $scope.newmember.city = "";
-                $scope.newmember.occupation = "";
-                $scope.newmember.education = "";
-
-                $scope.newmember.group = "";
-                $scope.newmember.ministry = "";
-
-                $scope.newmember.membertype = "";
-                $scope.newmember.baptistdate = "";
-                $scope.newmember.address = "";
-                $scope.newmember.file = "";
-                $scope.newmember.maritalstatus = "";
             },
                 function (error) {
                     handleError(Error);

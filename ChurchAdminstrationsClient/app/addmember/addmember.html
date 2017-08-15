@@ -6,11 +6,7 @@
                     <div data-cc-widget-header title="{{vm.title}}"></div>
                     <div class="widget-content user">
                         <strong class="success">{{message}}</strong>
-                        <div class="modal-header">
-                            <h4 class="modal-title bblue" id="myModalLabel" ng-hide="editMode">Add </h4>
-                            <button type="button" class="close bgreen" data-dismiss="modal" aria-hidden="true">X</button>
-                            <h4 class="modal-title bblue" id="myModalLabel" ng-show="editMode">Edit</h4>
-                        </div>
+                       
                         <div class="row">
 
                             <div class="col-md-12">
@@ -95,7 +91,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Group</label>
                                                 <div class="col-md-4">
-                                                    <select class="form-control" data-ng-model="newmember.group" required name="group">
+                                                    <select class="form-control" data-ng-model="newmember.groupname" required name="group">
                                                         <option data-ng-repeat= "m in vm.groups" value="{{m.groupName}}">{{m.groupName}}</option>
                                                     </select>
                                                 </div>
@@ -104,7 +100,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Ministry</label>
                                                 <div class="col-md-4">
-                                                    <select class="form-control" data-ng-model="ministry" required name="ministry">
+                                                    <select class="form-control" data-ng-model="newmember.ministryname" required name="ministry">
                                                         <option data-ng-repeat= "m in vm.ministries" value="{{m.ministryName}}">{{m.ministryName}}</option>
                                                     </select>
                                                 </div>
@@ -189,7 +185,7 @@
                                                         </div>
                                                         <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
                                                         <div>
-                                                            <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" data-ng-model="newmember.file"  name="file"></span>
+                                                            <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" data-ng-model="newmember.image"  name="image"></span>
                                                             <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
                                                         </div>
                                                     </div>
@@ -203,9 +199,7 @@
                                                     <span data-ng-hide="editMode">
                                                         <button type="submit" class="btn btn-default" data-ng-click="save()">Submit</button>
                                                         </span>
-                                                        <span data-ng-show="editMode">
-                                                            <input type="submit" value="Update" data-ng-click="update(newmember)" class="btn btn-primary" />
-                                                        </span>
+                                                       
                                                         <a class="btn btn-danger" href="#/member" class="btn btn-default">Cancel</a>
 </div>
                                             </div>

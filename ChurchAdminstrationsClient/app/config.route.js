@@ -75,7 +75,29 @@
                     controller: 'addmember'
 
                 }
-            }
+            },
+
+             {
+
+                 url: '/editmember/:MemberId',
+                config: {
+                    title: 'edit member',
+                    templateUrl: 'app/editmember/editmember.html',
+                    controller: 'editmember'
+
+                }
+            },
+
+             {
+
+                 url: '/deletemember/:MemberId',
+                 config: {
+                     title: 'delete member',
+                     templateUrl: 'app/deletemember/deletemember.html',
+                     controller: 'deletemember'
+
+                 }
+             }
         ];
     }
 })();

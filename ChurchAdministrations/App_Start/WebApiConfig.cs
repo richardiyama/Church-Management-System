@@ -20,6 +20,9 @@ namespace ChurchAdministrations
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
 
+            //var constraints = new { httpMethod = new HttpMethodConstraint(HttpMethod.Options) };
+            //config.Routes.IgnoreRoute("OPTIONS", "{*pathInfo}", constraints);
+
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             //Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
@@ -30,10 +33,30 @@ namespace ChurchAdministrations
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+            var routes = config.Routes;
+
+            routes.MapHttpRoute(
+            name: "ApiMember",
+            routeTemplate: "api/{controller}/{id}",
+            defaults: new { controller = "Member", id = RouteParameter.Optional }
+            );
+
+            routes.MapHttpRoute(
+            name: "ApiGroup",
+            routeTemplate: "api/{controller}/{id}",
+            defaults: new { controller = "Group", id = RouteParameter.Optional }
+            );
+
+            routes.MapHttpRoute(
+            name: "ApiMinistry",
+            routeTemplate: "api/{controller}/{id}",
+            defaults: new { controller = "Ministry", id = RouteParameter.Optional }
+            );
+
+            routes.MapHttpRoute(
+            name: "DefaultApi",
+            routeTemplate: "api/{controller}/{id}",
+            defaults: new { id = RouteParameter.Optional }
             );
 
             config.Formatters.Remove(config.Formatters.XmlFormatter);
