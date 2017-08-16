@@ -13,7 +13,7 @@
 
         var vm = this;
         vm.title = 'Edit Member';
-        vm.members = [];
+        //vm.members = [];
 
         
 
@@ -22,22 +22,14 @@
        
        
         function activate() {
-            var promises = [getMembers(),Edit()];
+            var promises = [Edit()];
             common.activateController(promises, editMember)
                 .then(function () { log('Activated Edit Member View'); });
         }
 
 
 
-        function getMembers() {
-            return datacontext.getMembers().then(function (data) {
-                vm.members = data.$values;
-                console.log(vm.members);
-                return vm.members;
-
-            });
-        }
-
+       
         function Edit() {
            
             $http.get('http://localhost:58376/api/Member/' + $routeParams.MemberId).then(function (response) {

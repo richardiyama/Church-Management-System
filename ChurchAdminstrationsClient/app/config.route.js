@@ -97,6 +97,73 @@
                      controller: 'deletemember'
 
                  }
+             },
+
+
+              {
+
+                 url: '/addministry',
+                 config: {
+                     title: 'Add new ministry',
+                     templateUrl: 'app/addministry/addministry.html',
+                     controller: 'addministry'
+
+                 }
+             },
+
+             {
+
+                 url: '/editministry/:MinistryId',
+                 config: {
+                     title: 'edit ministry',
+                     templateUrl: 'app/editministry/editministry.html',
+                     controller: 'editministry'
+
+                 }
+             },
+
+             {
+
+                 url: '/deleteministry/:MinistryId',
+                 config: {
+                     title: 'delete ministry',
+                     templateUrl: 'app/deleteministry/deleteministry.html',
+                     controller: 'deleteministry'
+
+                 }
+             },
+
+              {
+
+                 url: '/addgroup',
+                 config: {
+                     title: 'Add new group',
+                     templateUrl: 'app/addgroup/addgroup.html',
+                     controller: 'addgroup'
+
+                 }
+             },
+
+             {
+
+                 url: '/editgroup/:GroupId',
+                 config: {
+                     title: 'edit group',
+                     templateUrl: 'app/editgroup/editgroup.html',
+                     controller: 'editgroup'
+
+                 }
+             },
+
+             {
+
+                 url: '/deletegroup/:GroupId',
+                 config: {
+                     title: 'delete group',
+                     templateUrl: 'app/deletegroup/deletegroup.html',
+                     controller: 'deletegroup'
+
+                 }
              }
         ];
     }

@@ -100,11 +100,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\addgroup\addgroup.html" />
+    <Content Include="app\addgroup\addgroup.js" />
     <Content Include="app\addmember\addmember.js" />
+    <Content Include="app\addministry\addministry.html" />
+    <Content Include="app\addministry\addministry.js" />
+    <Content Include="app\deletegroup\deletegroup.html" />
+    <Content Include="app\deletegroup\deletegroup.js" />
     <Content Include="app\deletemember\deletemember.html" />
     <Content Include="app\deletemember\deletemember.js" />
+    <Content Include="app\deleteministry\deleteministry.html" />
+    <Content Include="app\deleteministry\deleteministry.js" />
+    <Content Include="app\editgroup\editgroup.html" />
+    <Content Include="app\editgroup\editgroup.js" />
     <Content Include="app\editmember\editmember.html" />
     <Content Include="app\editmember\editmember.js" />
+    <Content Include="app\editministry\editministry.html" />
+    <Content Include="app\editministry\editministry.js" />
     <Content Include="app\group\group.html" />
     <Content Include="app\group\group.js" />
     <Content Include="app\addmember\addmember.html" />

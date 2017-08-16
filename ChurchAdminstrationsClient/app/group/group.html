@@ -5,7 +5,72 @@
                 <div class="widget wviolet">
                     <div data-cc-widget-header title="{{vm.title}}"></div>
                     <div class="widget-content user">
-                        <h3>TODO: Implement Your Features</h3>
+
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/addgroup"><h3>Add Group</h3></a>
+
+                                    </header>
+
+
+
+
+                                    <div class="row">
+                                        <h1 class="text-center text-danger">Group</h1>
+                                        <hr />
+
+
+                                        <div class="row">
+                                            <div class="col-md-9 col-md-offset-1">
+                                                <input type="text" placeholder="Type to filter here" class="input-lg form-control" ng-model="txtFilter" />
+
+                                                <br />
+                                                <br />
+
+                                                <table class="table table-striped table-bordered">
+
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Photo</th>
+                                                            <th>Group Name</th>
+
+
+                                                        </tr>
+
+                                                    </thead>
+
+                                                    <tr data-ng-repeat="m in  vm.groups | filter:txtFilter">
+                                                        <td>
+                                                            {{m.imageSource}}
+                                                        </td>
+                                                        <td>
+                                                            {{m.groupName}}
+                                                        </td>
+
+
+                                                        <td><a class="btn btn-default" href="#/editgroup/{{m.groupID}}">Edit Group</a></td>
+                                                        <td><a class="btn btn-danger" href="#/deletegroup/{{m.groupID}}">Delete</a></td>
+                                                    </tr>
+
+
+                                                </table>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </section>
+                            </div>
+                        </div>
                     </div>
                     <div class="widget-foot">
                         <div class="clearfix"></div>

@@ -16,7 +16,9 @@
             getMinstries: getMinstries,
             getGroups: getGroups,
             getMembers: getMembers,
-            saveMember: saveMember
+            saveMember: saveMember,
+            saveGroup: saveGroup,
+            saveMinistry: saveMinistry
          
         };
 
@@ -45,6 +47,50 @@
             );
             //handleSucess,handleError);
         }
+
+        function saveMinistry(newministry, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Ministry",
+                data: newministry
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+        function saveGroup(newgroup, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Group",
+                data: newgroup
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+
         function handleSucess(response) {
 
             return response.data;

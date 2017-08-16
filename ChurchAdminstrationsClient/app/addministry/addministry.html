@@ -1,0 +1,80 @@
+﻿<section class="mainbar" data-ng-controller="addministry as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/ministry"><h3>Ministry List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <form class="form-horizontal">
+
+
+                                            <!-- input for Name-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Ministry Name</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newministry.ministryName" name="ministryName" required placeholder="Enter Ministry's Name">
+                                                </div>
+                                            </div>
+
+
+                                            <!-- image upload  -->
+                                            <div class="form-group">
+
+                                                <div class="col-md-4">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                            <img data-src="holder.js/100%x100%" alt="...">
+                                                        </div>
+                                                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                                        <div>
+                                                            <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" data-ng-model="newministry.imageSource" name="imageSource"></span>
+                                                            <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- submit button  -->
+                                            <div class="form-group">
+                                                <div class="col-lg-offset-2 col-lg-10">
+
+                                                    <button type="submit" class="btn btn-default" data-ng-click="save()">Submit</button>
+
+
+                                                    <a class="btn btn-danger" href="#/ministry" class="btn btn-default">Cancel</a>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
