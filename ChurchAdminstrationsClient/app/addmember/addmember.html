@@ -52,7 +52,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Password</label>
                                                 <div class="col-md-4">
-                                                    <input type="password" class="form-control" data-ng-model="newmember.confirmpassword" name="confirmpassword" required placeholder="Confirm Password ">
+                                                    <input type="password" class="form-control" data-ng-model="newmember.confirmPassword" name="confirmPassword" required placeholder="Confirm Password ">
                                                 </div>
                                             </div>
 
@@ -72,7 +72,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Date Of Birth</label>
                                                 <div class="col-md-4">
-                                                    <input type="date" class="form-control" data-ng-model="newmember.dateofbirth" name="dateofbirth" required placeholder="Enter Date">
+                                                    <input type="date" class="form-control" data-ng-model="newmember.dateOfBirth" name="dateOfBirth" required placeholder="Enter Date">
                                                 </div>
                                             </div>
 
@@ -80,7 +80,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Marital Status</label>
                                                 <div class="col-md-4">
-                                                    <select class="form-control" data-ng-model="newmember.maritalstatus" required name="maritalstatus">
+                                                    <select class="form-control" data-ng-model="newmember.maritalstatus" required name="maritalStatus">
                                                         <option value="Married">Married</option>
                                                         <option value="Unmarried">Unmarried</option>
                                                     </select>
@@ -91,8 +91,8 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Group</label>
                                                 <div class="col-md-4">
-                                                    <select class="form-control" data-ng-model="newmember.groupname" required name="group">
-                                                        <option data-ng-repeat= "m in vm.groups" value="{{m.groupName}}">{{m.groupName}}</option>
+                                                    <select  class="form-control" data-ng-model="newmember.groupID" required name="groupID">
+                                                        <option data-ng-repeat= "m in vm.groups" value="{{m.groupID}}">{{m.groupName}}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -100,8 +100,8 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Ministry</label>
                                                 <div class="col-md-4">
-                                                    <select class="form-control" data-ng-model="newmember.ministryname" required name="ministry">
-                                                        <option data-ng-repeat= "m in vm.ministries" value="{{m.ministryName}}">{{m.ministryName}}</option>
+                                                    <select class="form-control" data-ng-model="newmember.ministryID" required name="ministryID">
+                                                        <option data-ng-repeat= "m in vm.ministries" value="{{m.ministryID}}">{{m.ministryName}}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -126,7 +126,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Mobile Number</label>
                                                 <div class="col-md-4">
-                                                    <input type="tel" class="form-control" data-ng-model="newmember.mobileno" name="mobileno" required placeholder="Enter Member's Mobile Number">
+                                                    <input type="tel" class="form-control" data-ng-model="newmember.mobileNo" name="mobileNo" required placeholder="Enter Member's Mobile Number">
                                                 </div>
                                             </div>
 
@@ -161,7 +161,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Member Type</label>
                                                 <div class="col-md-4">
-                                                    <select class="form-control" data-ng-model="newmember.membertype" required name="membertype">
+                                                    <select class="form-control" data-ng-model="newmember.membertype" required name="memberType">
                                                         <option value="Volunteer">Volunteer</option>
                                                         <option value="Preserve">Preserve</option>
                                                     </select>
@@ -172,7 +172,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Baptist Date</label>
                                                 <div class="col-md-4">
-                                                    <input type="date" class="form-control" data-ng-model="newmember.baptistdate" name="baptistdate" required placeholder="Enter member's Babptist Date">
+                                                    <input type="date" class="form-control" data-ng-model="newmember.baptistdate" name="baptistDate" required placeholder="Enter member's Babptist Date">
                                                 </div>
                                             </div>
                                             <!-- image upload  -->

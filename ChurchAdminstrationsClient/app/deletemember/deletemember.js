@@ -34,12 +34,32 @@
             $http.get('http://localhost:58376/api/Member/' + $routeParams.MemberId).then(function (response) {
 
                 $scope.newmember = response.data;
+
+                $http.get('http://localhost:58376/api/Group/' + $scope.newmember.groupID).then(function (response) {
+
+                    $scope.newgroup = response.data;
+                })
+
+                
+
+                $http.get('http://localhost:58376/api/Ministry/' + $scope.newmember.ministryID).then(function (response) {
+
+                    $scope.newministry = response.data;
+                })
+
             })
 
+           
             $scope.removeMember = function (data) {
                 
 
                 $http.delete('http://localhost:58376/api/Member/' + $routeParams.MemberId, data).then(function (data) {
+
+                   
+
+                   
+                    $scope.newgroup.groupName = "";
+                    $scope.newministry.ministryName = "";
 
                     $scope.newmember.name = "";
 
@@ -71,10 +91,7 @@
 
                     
                     $scope.newmember.education = "";
-                    
-                    
-                    $scope.newmember.groupName = "";
-                    
+                   
 
                     $scope.newmember.ministryName = "";
 

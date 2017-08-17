@@ -44,8 +44,8 @@ namespace ChurchAdministrations.Models
 
         public string Education { get; set; }
 
-        public string GroupName { get; set; }
-        public string MinistryName { get; set; }
+     
+        
 
 
         [DataType(DataType.Date)]
@@ -57,12 +57,14 @@ namespace ChurchAdministrations.Models
         public string Address { get; set; }
         public string Image { get; set; }
 
-       
-        public virtual ICollection<Group> Groups { get; set; }
+        public int MinistryID { get; set; }
 
+        public virtual Ministry Ministry { get; set; }
+        public virtual Group Group { get; set; }
+
+        public int GroupID { get; set; }
 
         
-        public virtual ICollection<Ministry> Ministries { get; set; }
 
 
 

@@ -13,10 +13,7 @@ namespace ChurchAdministrations.Models
         public string GroupName { get; set; }
         public string ImageSource { get; set; }
 
-       
-        public int MemberID { get; set; }
-
-        public virtual Member Member { get; set; }
+        public virtual ICollection<Member> Member { get; set; }
 
     }
 }
