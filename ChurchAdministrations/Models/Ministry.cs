@@ -15,5 +15,6 @@ namespace ChurchAdministrations.Models
        
 
         public virtual ICollection<Member> Member { get; set; }
+        public virtual ICollection<Attendance> Attendance { get; set; }
     }
 }

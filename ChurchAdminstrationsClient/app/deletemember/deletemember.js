@@ -38,81 +38,81 @@
                 $http.get('http://localhost:58376/api/Group/' + $scope.newmember.groupID).then(function (response) {
 
                     $scope.newgroup = response.data;
-                })
+                });
 
-                
+
 
                 $http.get('http://localhost:58376/api/Ministry/' + $scope.newmember.ministryID).then(function (response) {
 
                     $scope.newministry = response.data;
-                })
+                });
 
-            })
+            });
 
            
             $scope.removeMember = function (data) {
-                
+
 
                 $http.delete('http://localhost:58376/api/Member/' + $routeParams.MemberId, data).then(function (data) {
 
-                   
 
-                   
+
+
                     $scope.newgroup.groupName = "";
                     $scope.newministry.ministryName = "";
 
                     $scope.newmember.name = "";
 
                     $scope.newmember.username = "";
-                    
+
                     $scope.newmember.email = "";
-                    
+
 
                     $scope.newmember.dateofbirth = "";
 
-                    
+
                     $scope.newmember.password = "";
-                    
-                    
+
+
                     $scope.newmember.confirmPassword = "";
-                    
+
 
                     $scope.newmember.gender = "";
 
-                    
+
                     $scope.newmember.mobileNo = "";
-                    
-                   
+
+
                     $scope.newmember.city = "";
-                    
+
 
 
                     $scope.newmember.occupation = "";
 
-                    
+
                     $scope.newmember.education = "";
-                   
+
 
                     $scope.newmember.ministryName = "";
 
-                    
+
                     $scope.newmember.baptistDate = "";
-                    
-                   
+
+
                     $scope.newmember.address = "";
-                    
+
 
                     $scope.newmember.maritalStatus = "";
 
-                    
+
                     $scope.newmember.image = "";
-                    
+
 
 
                     alert("Member deleted");
-                })
+                });
 
-            }
+            };
 
         }
 

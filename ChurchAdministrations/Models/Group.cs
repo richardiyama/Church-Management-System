@@ -14,6 +14,7 @@ namespace ChurchAdministrations.Models
         public string ImageSource { get; set; }
 
         public virtual ICollection<Member> Member { get; set; }
+        public virtual ICollection<Service> Service { get; set; }
 
     }
 }
