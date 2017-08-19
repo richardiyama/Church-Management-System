@@ -62,6 +62,11 @@ namespace ChurchAdministrations.Models
         public virtual Ministry Ministry { get; set; }
         public virtual Group Group { get; set; }
 
+
+        public virtual ICollection<Message> Message { get; set; }
+
+        public virtual ICollection<Admin> Admin { get; set; }
+        public virtual ICollection<Pastoral> Pastoral { get; set; }
         public virtual ICollection<Pledge> Pledge { get; set; }
         public virtual ICollection<SellGift> SellGift { get; set; }
         public virtual ICollection<Accountant> Accountant { get; set; }
