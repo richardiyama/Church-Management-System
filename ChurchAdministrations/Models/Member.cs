@@ -63,6 +63,7 @@ namespace ChurchAdministrations.Models
         public virtual Group Group { get; set; }
 
         public virtual ICollection<Pledge> Pledge { get; set; }
+        public virtual ICollection<SellGift> SellGift { get; set; }
 
         public int GroupID { get; set; }
 
