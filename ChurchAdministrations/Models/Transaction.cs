@@ -5,9 +5,12 @@ using System.Web;
 
 namespace ChurchAdministrations.Models
 {
-    public class Accountant
+    public class Transaction
     {
-        public int AccountantID { get; set; }
+        public int TransactionID { get; set; }
+        public int Amount { get; set; }
+        public string PaymentMethod { get; set; }
+        public string Comment { get; set; }
         public int MemberID { get; set; }
         public virtual Member Member { get; set; }
     }

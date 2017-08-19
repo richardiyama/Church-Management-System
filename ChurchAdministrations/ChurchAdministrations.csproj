@@ -268,6 +268,7 @@
     <Compile Include="Models\Donation.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Income.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Ministry.cs" />
     <Compile Include="Models\Pledge.cs" />
@@ -276,6 +277,7 @@
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\SpiritualGift.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Models\Venue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />

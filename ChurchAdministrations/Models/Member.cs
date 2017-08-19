@@ -65,6 +65,8 @@ namespace ChurchAdministrations.Models
         public virtual ICollection<Pledge> Pledge { get; set; }
         public virtual ICollection<SellGift> SellGift { get; set; }
         public virtual ICollection<Accountant> Accountant { get; set; }
+        public virtual ICollection<Transaction> Transaction { get; set; }
+        public virtual ICollection<Income> Income { get; set; }
 
         public int GroupID { get; set; }
 
