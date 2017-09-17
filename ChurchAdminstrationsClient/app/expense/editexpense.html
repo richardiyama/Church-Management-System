@@ -1,0 +1,90 @@
+﻿<section class="mainbar" data-ng-controller="editexpense as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/expense"><h3>Expense List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <form class="form-horizontal">
+
+
+                                            <!-- input for Supplier Name-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Supplier Name</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newexpense.supplierName" required placeholder="Enter Supplier's Name">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Status -->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Status</label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newexpense.status" required name="status">
+                                                        <option value="Paid">Paid</option>
+                                                        <option value="Unpaid">Unpaid</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Date-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Date</label>
+                                                <div class="col-md-4">
+                                                    <input type="date" class="form-control" data-ng-model="newexpense.date">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Expense Amount -->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Expense Amount </label>
+                                                <div class="col-md-4">
+                                                    <input type="number" class="form-control" data-ng-model="newexpense.expenseAmount">
+                                                </div>
+                                            </div>
+
+
+
+                                            <!-- submit button  -->
+                                            <div class="form-group">
+                                                <div class="col-lg-offset-2 col-lg-10">
+
+                                                    <button type="submit" class="btn btn-default" data-ng-click="updateExpense()">Submit</button>
+
+
+                                                    <a class="btn btn-danger" href="#/expense" class="btn btn-default">Cancel</a>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

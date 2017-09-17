@@ -76,6 +76,6 @@ C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministratio
 C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\bin\ru\System.Spatial.resources.dll
 C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\obj\Debug\ChurchAdminstrationsClient.csprojResolveAssemblyReference.cache
 C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\obj\Debug\ChurchAdminstrationsClient.dll
 C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\obj\Debug\ChurchAdminstrationsClient.pdb
+C:\Users\Richard Iyama\Documents\Visual Studio 2017\Projects\ChurchAdministrations\ChurchAdminstrationsClient\obj\Debug\ChurchAdminstrationsClient.csprojResolveAssemblyReference.cache

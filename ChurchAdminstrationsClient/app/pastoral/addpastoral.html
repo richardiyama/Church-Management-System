@@ -1,0 +1,82 @@
+﻿<section class="mainbar" data-ng-controller="addpastoral as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+                       
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                     <a class=" pull-right btn btn-info btn-sm" href="#/pastoral"><h3>Pastoral List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <form class="form-horizontal">
+                                         
+
+                                            <!-- input for Member Name-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Member Name</label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newpastoral.description" required name="description">
+                                                        <option data-ng-repeat="m in vm.members" value="{{m.memberID}}">{{m.name}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Pastoral Time-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Pastoral Time</label>
+                                                <div class="col-md-4">
+                                                    <input type="time" class="form-control" data-ng-model="newpastoral.pastoralTime">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Pastoral Date-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Pastoral Date</label>
+                                                <div class="col-md-4">
+                                                    <input type="date" class="form-control" data-ng-model="newpastoral.pastoralDate">
+                                                </div>
+                                            </div>
+                                            
+                                            
+
+
+                                            <!-- submit button  -->
+                                            <div class="form-group">
+                                                <div class="col-lg-offset-2 col-lg-10">
+                                                    
+                                                        <button type="submit" class="btn btn-default" data-ng-click="save()">Submit</button>
+                                                        
+                                                       
+                                                        <a class="btn btn-danger" href="#/pastoral" class="btn btn-default">Cancel</a>
+</div>
+                                            </div>
+
+                                            </form>
+
+</div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

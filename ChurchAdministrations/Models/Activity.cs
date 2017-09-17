@@ -11,7 +11,7 @@ namespace ChurchAdministrations.Models
 
         public string ActivityName { get; set; }
         public string ActivityType { get; set; }
-        public string ActivityCategory { get; set; }
+       
         public string GuestSpeaker { get; set; }
         public string Reoccurrance { get; set; }
         public string AllDay { get; set; }
@@ -20,6 +20,9 @@ namespace ChurchAdministrations.Models
         public DateTime EndTime { get; set; }
         public DateTime ActivityDate { get; set; }
         public DateTime EndDate { get; set; }
+
+        public int ActivityCategoryID { get; set; }
+        public virtual ActivityCategory ActivityCategory { get; set; }
 
         public int GroupID { get; set; }
         public int VenueID { get; set; }

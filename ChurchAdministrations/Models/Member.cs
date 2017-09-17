@@ -65,11 +65,12 @@ namespace ChurchAdministrations.Models
 
         public virtual ICollection<Message> Message { get; set; }
 
-        public virtual ICollection<Admin> Admin { get; set; }
-        public virtual ICollection<Pastoral> Pastoral { get; set; }
+       
+    
         public virtual ICollection<Pledge> Pledge { get; set; }
+        public virtual ICollection<Donation> Donation { get; set; }
         public virtual ICollection<SellGift> SellGift { get; set; }
-        public virtual ICollection<Accountant> Accountant { get; set; }
+    
         public virtual ICollection<Transaction> Transaction { get; set; }
         public virtual ICollection<Income> Income { get; set; }
 

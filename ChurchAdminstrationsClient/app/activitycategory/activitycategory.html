@@ -1,0 +1,81 @@
+﻿<section class="mainbar" data-ng-controller="activitycategory as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+                                     
+                                        <ul class="fa-ul">
+                                            <li><p><a href="#/addactivitycategory" class="btn btn-primary">Add New Activity Category</a></p></li>
+                                            <li><b>Search </b> <input type="text" ng-model="name" /></li>
+                                        </ul>
+   
+                                    </header>
+                                  
+
+
+
+                                    <div class="row">
+                                        <h1 class="text-center text-danger">Activity Categories</h1>
+                                        <hr />
+
+
+                                        <div class="row">
+                                            <div class="col-md-9 col-md-offset-1">
+                                               <input type="text" placeholder="Type to filter here" class="input-lg form-control" ng-model="txtFilter" />
+
+                                                <br />
+                                                <br />
+
+                                                <table class="table table-striped table-bordered">
+
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Activity Category Name</th>
+                                                           
+                                                            <th>Action</th>
+                                                            
+                                                        </tr>
+
+                                                    </thead>
+
+                                                    <tr data-ng-repeat= "m in vm.activitycategories | filter:txtFilter">
+                                                        <td>
+                                                            {{m.activityCategoryName}}
+                                                        </td>
+                                                       
+                                                        <td><a class="btn btn-primary" href="#/editactivitycategory/{{m.activityCategoryID}}">Edit Activity</a></td>
+                                                        <td><a class="btn btn-primary" href="#/deleteactivitycategory/{{m.activityCategoryID}}">Delete Activity</a></td>
+                                                    </tr>
+
+
+                                                </table>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                     
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

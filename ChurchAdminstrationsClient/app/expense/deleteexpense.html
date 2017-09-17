@@ -1,0 +1,55 @@
+﻿<section class="mainbar" data-ng-controller="deleteexpense as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/expense"><h3>Expense List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <div>{{newexpense.supplierName}}</div>
+
+                                        <div>
+                                            {{newexpense.status}}
+                                        </div>
+                                        <div>
+                                            {{newexpense.date}}
+                                        </div>
+
+                                        <div>{{newexpense.expenseAmount}}</div>
+
+
+                                        <div class="actions">
+
+                                            <a class="btn btn-danger" data-ng-click="removeExpense()">Remove</a>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

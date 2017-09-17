@@ -1,0 +1,161 @@
+﻿<section class="mainbar" data-ng-controller="editactivity as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/activity"><h3>Activity List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <form class="form-horizontal">
+
+
+                                            <!-- input for Activity Name-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Activity Name</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newactivity.activityName" required placeholder="Enter Activity's Name">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Activity Type-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Activity Type</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newactivity.activityType">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Activity Category-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Activity Category</label>
+                                                <a class=" pull-right btn btn-info btn-sm" href="#/addactivitycategory"><h3> Add Activity Category</h3></a>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newactivity.activityCategoryID" required name="activityCategoryID">
+                                                        <option data-ng-repeat="m in vm.activitycategories" value="{{m.activityCategoryID}}">{{m.activityCategoryName}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Guest Speaker-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Guest Speaker</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newactivity.guestSpeaker">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Venue-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Venue</label>
+                                                <a class=" pull-right btn btn-info btn-sm" href="#/addvenue"><h3> Add new Venue</h3></a>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newactivity.venueID" required name="venueID">
+                                                        <option data-ng-repeat="m in vm.venues" value="{{m.venueID}}">{{m.venueTitle}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Reoccurrance-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Reoccurrance</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newactivity.reoccurrance">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for AllDay -->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">AllDay</label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newactivity.allDay" required name="allDay">
+                                                        <option value="Yes">Yes</option>
+                                                        <option value="No">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Start Time-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Start Time</label>
+                                                <div class="col-md-4">
+                                                    <input type="date" class="form-control" data-ng-model="newactivity.startTime">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for End Time-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">End Time</label>
+                                                <div class="col-md-4">
+                                                    <input type="date" class="form-control" data-ng-model="newactivity.endTime">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Activity Date -->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Activity Date</label>
+                                                <div class="col-md-4">
+                                                    <input type="date" class="form-control" data-ng-model="newactivity.activityDate" name="activityDate" required placeholder="Enter activity's Date">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for End Date-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">End Date</label>
+                                                <div class="col-md-4">
+                                                    <input type="date" class="form-control" data-ng-model="newactivity.endDate">
+                                                </div>
+                                            </div>
+
+                                            <!-- input for Member Group-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Member Group</label>
+
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newactivity.groupID" required name="groupID">
+                                                        <option data-ng-repeat="m in vm.groups" value="{{m.groupID}}">{{m.groupName}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- submit button  -->
+                                            <div class="form-group">
+                                                <div class="col-lg-offset-2 col-lg-10">
+
+                                                    <button type="submit" class="btn btn-default" data-ng-click="updateActivity()">Submit</button>
+
+
+                                                    <a class="btn btn-danger" href="#/activity" class="btn btn-default">Cancel</a>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

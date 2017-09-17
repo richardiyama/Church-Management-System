@@ -9,7 +9,9 @@ namespace ChurchAdministrations.Models
     {
         public int SermonID { get; set; }
         public string Description { get; set; }
-        public string SermonContent { get; set; }
+        public string SermonTitle { get; set; }
+        public string SermonType { get; set; }
+        public string FileSource { get; set; }
         public string Status { get; set; }
     }
 }

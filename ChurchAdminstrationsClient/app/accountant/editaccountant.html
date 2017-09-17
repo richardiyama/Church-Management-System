@@ -1,0 +1,102 @@
+﻿<section class="mainbar" data-ng-controller="editaccountant as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+                        
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/accountant"><h3>Accountant List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <form class="form-horizontal">
+                                         
+
+                                            <!-- image upload  -->
+                                            <div class="form-group">
+
+                                                <div class="col-md-4">
+                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                        <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                            <img data-src="holder.js/100%x100%" alt="...">
+                                                        </div>
+                                                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                                        <div>
+                                                            <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" data-ng-model="newaccountant.photo" name="photo"></span>
+                                                            <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!-- input for Staff Member Name-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Staff Member Name</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newaccountant.staffMemberName"  required placeholder="Enter Staff Member Name">
+                                                    
+                                                </div>
+                                            </div>
+                                           
+                                           
+                                            <!-- input for Staff Member Email-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Staff Member Email</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newaccountant.staffMemberEmail" required placeholder="Enter Group Name">
+
+                                                </div>
+                                            </div>
+
+                                          
+                                            <!-- input for Staff Member Mobile Number-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Staff Member Mobile Number</label>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" data-ng-model="newaccountant.mobileNo" required placeholder="Enter Staff Member Mobile Number">
+
+                                                </div>
+                                            </div>
+
+
+                                            <!-- submit button  -->
+                                            <div class="form-group">
+                                                <div class="col-lg-offset-2 col-lg-10">
+                                                
+                                                        <button type="submit" class="btn btn-default" data-ng-click="updateAccountant()">Submit</button>
+                                                    
+                                                   
+                                                    
+                                                    <a class="btn btn-danger" href="#/accountant" class="btn btn-default">Cancel</a>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

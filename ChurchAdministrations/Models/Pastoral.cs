@@ -9,7 +9,7 @@ namespace ChurchAdministrations.Models
     {
         public int PastoralID { get; set; }
         public int MemberID { get; set; }
-        public virtual Member Member { get; set; }
+        public Member Member { get; set; }
 
         public DateTime PastoralDate { get; set; }
         public DateTime PastoralTime { get; set; }

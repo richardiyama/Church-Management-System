@@ -1,0 +1,59 @@
+﻿<section class="mainbar" data-ng-controller="deletevenue as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/venue"><h3>Venue List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <div>{{newvenue.venueTitle}}</div>
+
+                                        <div>
+                                            {{newvenue.capacity}}
+                                        </div>
+                                        <div>
+                                            {{newvenue.requestBefore}}
+                                        </div>
+
+                                        <div>{{newvenue.equipment}}</div>
+
+                                        <div>
+                                            {{newvenue.multipleReservation}}
+                                        </div>
+                                       
+
+                                        <div class="actions">
+
+                                            <a class="btn btn-danger"  data-ng-click="removeVenue()">Remove</a>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

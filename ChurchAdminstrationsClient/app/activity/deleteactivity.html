@@ -1,0 +1,79 @@
+﻿<section class="mainbar" data-ng-controller="deleteactivity as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                        <a class=" pull-right btn btn-info btn-sm" href="#/activity"><h3>Activity List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <div>{{newactivity.activityName}}</div>
+
+                                        <div>
+                                            {{newactivity.activityType}}
+                                        </div>
+                                        <div>
+                                            {{newactivity.guestSpeaker}}
+                                        </div>
+
+                                        <div>{{newactivity.reoccurrance}}</div>
+
+                                        <div>
+                                            {{newactivity.allDay}}
+                                        </div>
+                                        <div>
+                                            {{newactivity.startTime}}
+                                        </div>
+
+                                        <div>{{newactivity.endTime}}</div>
+
+                                        <div>
+                                            {{newactivity.activityDate}}
+                                        </div>
+                                        <div>
+                                            {{newactivity.endDate}}
+                                        </div>
+
+                                        <div>{{newgroup.groupName}}</div>
+
+                                        <div>
+                                            {{newactivitycategory.activityCategoryName}}
+                                        </div>
+                                        <div>
+                                            {{newvenue.venueTitle}}
+                                        </div>
+                                       
+                                        <div class="actions">
+
+                                            <a class="btn btn-danger"  data-ng-click="removeActivity()">Remove</a>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

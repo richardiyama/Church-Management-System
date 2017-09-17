@@ -12,20 +12,206 @@
         //var $scope = common.$scope;
         var service = {
             getPeople: getPeople,
+            getPastorals: getPastorals,
+            getSermons: getSermons,
+            getSongs: getSongs,
+            getExpenses: getExpenses,
             getMessageCount: getMessageCount,
             getMinstries: getMinstries,
+            getAccountants: getAccountants,
             getGroups: getGroups,
             getMembers: getMembers,
+            getVenues: getVenues,
             saveMember: saveMember,
             saveGroup: saveGroup,
-            saveMinistry: saveMinistry
-         
+            getActivities: getActivities,
+            getActivityCategories: getActivityCategories,
+            saveMinistry: saveMinistry,
+            saveAccountant: saveAccountant,
+            saveActivityCategory: saveActivityCategory,
+            saveActivity: saveActivity,
+            saveVenue: saveVenue,
+            saveExpense: saveExpense,
+            saveSermon: saveSermon,
+            saveSong: saveSong,
+            savePastoral: savePastoral
         };
 
         return service;
 
         function getMessageCount() { return $q.when(72); }
 
+        function savePastoral(newpastoral, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Pastoral",
+                data: newpastoral
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+        function saveSong(newsong, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Song",
+                data: newsong
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+
+        function saveSermon(newsermon, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Sermon",
+                data: newsermon
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+
+        function saveExpense(newexpense, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Expense",
+                data: newexpense
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+
+        function saveVenue(newvenue, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Venue",
+                data: newvenue
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+        function saveActivity(newactivity, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Activity",
+                data: newactivity
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+        function saveActivityCategory(newactivitycategory, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/ActivityCategory",
+                data: newactivitycategory
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
+
+
+        function saveAccountant(newaccountant, $scope) {
+            var request = $http({
+                method: "POST",
+                url: "http://localhost:58376/api/Accountant",
+                data: newaccountant
+            });
+
+            //  var nsg = request.then(handleSucess, handleError);
+
+            return request.then(function (response) {
+
+
+
+            },
+                function (error) {
+                    handleError(Error);
+                }
+            );
+            //handleSucess,handleError);
+        }
         
         function saveMember(newmember, $scope) {
             var request = $http({
@@ -112,6 +298,64 @@
         }
 
 
+         function getPastorals() {
+
+            // Get the deferred object
+            var deferred = $q.defer();
+            // Initiates the AJAX call
+            $http({ method: 'GET', url: 'http://localhost:58376/api/Pastoral' }).success(deferred.resolve).error(deferred.reject);
+            // Returns the promise - Contains result once request completes
+            return deferred.promise;
+
+        }
+
+        function getSongs() {
+
+            // Get the deferred object
+            var deferred = $q.defer();
+            // Initiates the AJAX call
+            $http({ method: 'GET', url: 'http://localhost:58376/api/Song' }).success(deferred.resolve).error(deferred.reject);
+            // Returns the promise - Contains result once request completes
+            return deferred.promise;
+
+        }
+
+        function getExpenses() {
+
+            // Get the deferred object
+            var deferred = $q.defer();
+            // Initiates the AJAX call
+            $http({ method: 'GET', url: 'http://localhost:58376/api/Expense' }).success(deferred.resolve).error(deferred.reject);
+            // Returns the promise - Contains result once request completes
+            return deferred.promise;
+
+        }
+
+
+
+
+        function getSermons() {
+
+            // Get the deferred object
+            var deferred = $q.defer();
+            // Initiates the AJAX call
+            $http({ method: 'GET', url: 'http://localhost:58376/api/Sermon' }).success(deferred.resolve).error(deferred.reject);
+            // Returns the promise - Contains result once request completes
+            return deferred.promise;
+
+        }
+
+        function getVenues() {
+
+            // Get the deferred object
+            var deferred = $q.defer();
+            // Initiates the AJAX call
+            $http({ method: 'GET', url: 'http://localhost:58376/api/Venue' }).success(deferred.resolve).error(deferred.reject);
+            // Returns the promise - Contains result once request completes
+            return deferred.promise;
+
+        }
+
         function getGroups() {
 
             // Get the deferred object
@@ -123,6 +367,28 @@
            
         }
 
+        function getActivityCategories() {
+
+            // Get the deferred object
+            var deferred = $q.defer();
+            // Initiates the AJAX call
+            $http({ method: 'GET', url: 'http://localhost:58376/api/ActivityCategory' }).success(deferred.resolve).error(deferred.reject);
+            // Returns the promise - Contains result once request completes
+            return deferred.promise;
+
+        }
+
+        function getActivities() {
+
+            // Get the deferred object
+            var deferred = $q.defer();
+            // Initiates the AJAX call
+            $http({ method: 'GET', url: 'http://localhost:58376/api/Activity' }).success(deferred.resolve).error(deferred.reject);
+            // Returns the promise - Contains result once request completes
+            return deferred.promise;
+
+        }
+
         function getMinstries() {
 
             // Get the deferred object
@@ -132,6 +398,18 @@
             // Returns the promise - Contains result once request completes
             return deferred.promise;
            
+        }
+
+
+        function getAccountants() {
+
+            // Get the deferred object
+            var deferred = $q.defer();
+            // Initiates the AJAX call
+            $http({ method: 'GET', url: 'http://localhost:58376/api/Accountant' }).success(deferred.resolve).error(deferred.reject);
+            // Returns the promise - Contains result once request completes
+            return deferred.promise;
+
         }
 
         function getMembers() {

@@ -1,0 +1,103 @@
+﻿<section class="mainbar" data-ng-controller="addaccountant as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wviolet">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <strong class="success">{{message}}</strong>
+                       
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <section class="panel">
+                                    <header class="panel-heading">
+
+                                     <a class=" pull-right btn btn-info btn-sm" href="#/accountant"><h3>Accountant List</h3></a>
+
+
+                                    </header>
+
+                                    <div class="panel-body">
+
+                                        <form class="form-horizontal">
+                                         
+
+                                            <!-- input for group-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Members</label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newaccountant.photo" required name="photo">
+                                                        <option data-ng-repeat="m in vm.members" value="{{m.image}}">{{m.image}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for group-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Members</label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newaccountant.staffMemberName" required name="staffMemberName">
+                                                        <option data-ng-repeat="m in vm.members" value="{{m.name}}">{{m.name}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for group-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Members</label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newaccountant.staffMemberEmail" required name="staffMemberEmail">
+                                                        <option data-ng-repeat="m in vm.members" value="{{m.email}}">{{m.email}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for group-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Members</label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newaccountant.mobileNo" required name="mobileNo">
+                                                        <option data-ng-repeat="m in vm.members" value="{{m.mobileNo}}">{{m.mobileNo}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- input for group-->
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">Members</label>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" data-ng-model="newaccountant.memberID" required name="memberID">
+                                                        <option data-ng-repeat="m in vm.members" value="{{m.memberID}}">{{m.education}}</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- submit button  -->
+                                            <div class="form-group">
+                                                <div class="col-lg-offset-2 col-lg-10">
+                                                    
+                                                        <button type="submit" class="btn btn-default" data-ng-click="save()">Submit</button>
+                                                        
+                                                       
+                                                        <a class="btn btn-danger" href="#/group" class="btn btn-default">Cancel</a>
+</div>
+                                            </div>
+
+                                            </form>
+
+</div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

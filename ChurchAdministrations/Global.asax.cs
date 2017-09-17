@@ -20,8 +20,8 @@ namespace ChurchAdministrations
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ChurchAdministrationsContextDB>());
 
-            Database.SetInitializer(new ChurchAdministrationsInitializerDB());
 
             var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
             json.SerializerSettings.PreserveReferencesHandling =

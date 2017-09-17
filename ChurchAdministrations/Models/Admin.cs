@@ -9,6 +9,6 @@ namespace ChurchAdministrations.Models
     {
         public int AdminID { get; set; }
         public int MemberID { get; set; }
-        public virtual Member Member { get; set; }
+        public Member Member { get; set; }
     }
 }
