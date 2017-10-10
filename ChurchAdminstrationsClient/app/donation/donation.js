@@ -1,50 +1,40 @@
 ﻿(function () {
     'use strict';
-    var getMember = 'member';
-    
-
-    angular.module('app').controller(getMember, ['common','datacontext', member]);
-    
-       
+    var getDonation = 'donation';
 
 
-       
-    
-      
+    angular.module('app').controller(getDonation, ['common', 'datacontext', donation]);
 
-            
-         
-   
-     
 
-    function member(common, datacontext) {
+
+    function donation(common, datacontext) {
         var getLogFn = common.logger.getLogFn;
-        var log = getLogFn(getMember);
+        var log = getLogFn(getDonation);
 
         var vm = this;
-        vm.members = [];
-        vm.title = 'Member';
+        vm.donations = [];
+        vm.title = 'Donation';
 
         activate();
 
         function activate() {
-            var promises = [getMembers()];
-            common.activateController(promises, getMember)
-                .then(function () { log('Activated Member View'); });
+            var promises = [getDonations()];
+            common.activateController(promises, getDonations)
+                .then(function () { log('Activated Donation View'); });
         }
 
-        function getMembers() {
-            return datacontext.getMembers().then(function (data) {
-                vm.members = data.$values;
-                console.log(vm.members);
-                return vm.members;
+        function getDonations() {
+            return datacontext.getDonations().then(function (data) {
+                vm.donations = data.$values;
+                console.log(vm.donations);
+                return vm.donations;
 
             });
         }
-       
+
     }
 
 
-   
-    
+
+
 })();

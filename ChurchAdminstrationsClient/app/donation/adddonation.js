@@ -1,54 +1,60 @@
 ﻿(function () {
     'use strict';
-    
-    var addGroup = 'addgroup';
 
-    
-    angular.module('app').controller(addGroup, ['common', 'datacontext', '$scope', addgroup]);
+    var addDonation = 'adddonation';
 
-    function addgroup(common, datacontext,$scope) {
+
+    angular.module('app').controller(addDonation, ['common', 'datacontext', '$scope', adddonation]);
+
+    function adddonation(common, datacontext, $scope) {
 
         var getLogFn = common.logger.getLogFn;
-        var log = getLogFn(addGroup);
+        var log = getLogFn(addDonation);
 
         var vm = this;
-        vm.title = 'Add Group';
-       
+        vm.title = 'Add Donation';
+        vm.donations = [];
+
         //vm.members = [];
         activate();
 
-       
-
-        
 
         $scope.save = function () {
-            var currentgroup = $scope.newgroup;
-            datacontext.saveGroup(currentgroup);
-            $scope.message = 'New Group saved';
+            var currentdonation = $scope.newdonation;
+            datacontext.saveDonation(currentdonation);
+            $scope.message = 'New Donation saved';
 
         }
 
         function activate() {
-           
-            common.activateController([], addGroup)
-                .then(function () { log('Activated Add Group View'); });
+            var promises = [getMembers()];
+            common.activateController(promises, addDonation)
+                .then(function () { log('Activated Add Donation View'); });
         }
 
 
 
+        function getMembers() {
+            return datacontext.getMembers().then(function (data) {
+                vm.members = data.$values;
+                console.log(vm.members);
+                return vm.members;
 
-       
+            });
+        }
+
+
     }
 
 
-   
 
 
 
 
 
-    
-                
+
+
+
 
 
 

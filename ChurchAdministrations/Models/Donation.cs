@@ -9,6 +9,7 @@ namespace ChurchAdministrations.Models
     {
         public int DonationID { get; set; }
         public DateTime TransactionDate { get; set; }
+        public string MemberName { get; set; }
         public int Amount { get; set; }
         public string PaymentMethod { get; set; }
         public virtual Member Member { get; set; }

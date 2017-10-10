@@ -1,11 +1,11 @@
-﻿<section class="mainbar" data-ng-controller="member as vm">
+﻿<section class="mainbar" data-ng-controller="donation as vm">
     <section class="matter">
         <div class="container">
             <div class="row">
                 <div class="widget wviolet">
                     <div data-cc-widget-header title="{{vm.title}}"></div>
                     <div class="widget-content user">
-                        
+
 
                         <div class="row">
 
@@ -13,25 +13,25 @@
 
                                 <section class="panel">
                                     <header class="panel-heading">
-                                     
+
                                         <ul class="fa-ul">
-                                            <li><p><a href="#/addmember" class="btn btn-primary">Add New Member</a></p></li>
+                                            <li><p><a href="#/adddonation" class="btn btn-primary">Add New Donation</a></p></li>
                                             <li><b>Search </b> <input type="text" ng-model="name" /></li>
                                         </ul>
-   
+
                                     </header>
-                                  
+
 
 
 
                                     <div class="row">
-                                        <h1 class="text-center text-danger">Members</h1>
+                                        <h1 class="text-center text-danger">Donation</h1>
                                         <hr />
 
 
                                         <div class="row">
                                             <div class="col-md-9 col-md-offset-1">
-                                               <input type="text" placeholder="Type to filter here" class="input-lg form-control" ng-model="txtFilter" />
+                                                <input type="text" placeholder="Type to filter here" class="input-lg form-control" ng-model="txtFilter" />
 
                                                 <br />
                                                 <br />
@@ -40,40 +40,37 @@
 
                                                     <thead>
                                                         <tr>
-                                                            <th>Photo</th>
-                                                            <th>Member Name</th>
-                                                            <th>Member Id</th>
-                                                            <th>Volunteer</th>
-                                                            <th>Member Email</th>
-                                                            <th>Mobile NO</th>
                                                             
+                                                            <th>Member Name</th>
+                                                            <th>Transaction Date</th>
+                                                            <th>Amount</th>
+                                                            <th>Method</th>
+                                                            <th>Edit</th>
+
+                                                            <th>Delete</th>
                                                         </tr>
 
                                                     </thead>
 
-                                                    <tr data-ng-repeat= "m in vm.members | filter:txtFilter">
+                                                    <tr data-ng-repeat="m in vm.donations | filter:txtFilter">
                                                         <td>
-                                                            {{m.image}}
+                                                            {{m.memberName}}
                                                         </td>
                                                         <td>
-                                                            {{m.name}}
-                                                        </td>
-
-                                                        <td>
-                                                            {{m.memberID}}
-                                                        </td>
-                                                        <td>
-                                                            {{m.memberType}}
-                                                        </td>
-                                                        <td>
-                                                            {{m.email}}
+                                                            {{m.transactionDate}}
                                                         </td>
 
                                                         <td>
-                                                            {{m.mobileNo}}
+                                                            {{m.amount}}
                                                         </td>
-                                                        <td><a class="btn btn-primary" href="#/editmember/{{m.memberID}}">Edit Member</a></td>
-                                                        <td><a class="btn btn-primary" href="#/deletemember/{{m.memberID}}">Delete Member</a></td>
+
+                                                        <td>
+                                                            {{m.method}}
+                                                        </td>
+
+
+                                                        <td><a class="btn btn-primary" href="#/editdonation/{{m.donationID}}">Edit Donation</a></td>
+                                                        <td><a class="btn btn-primary" href="#/deletedonation/{{m.donationID}}">Delete Donation</a></td>
                                                     </tr>
 
 
@@ -85,7 +82,7 @@
                                     </div>
 
 
-                                     
+
                                 </section>
                             </div>
                         </div>
